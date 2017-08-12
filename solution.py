@@ -1,17 +1,17 @@
 def valid_parentheses(string):
     # your code here
 
-    queue = []
+    stack = []
     for s in string:
         if(s == '('):
-            queue.append(s)
+            stack.append(s)
         elif(s == ')'):
             try:
-                queue.pop()
+                stack.pop()
             except:
                 return False
 
-    if(len(queue) == 0):
+    if(len(stack) == 0):
         return True
     else:
         return False
